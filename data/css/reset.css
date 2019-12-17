@@ -1,0 +1,137 @@
+@charset "utf-8";
+/**
+ * = global 统一样式
+ *******************************************************************************************************/
+  /* 改变动画的效果方式*/
+  * {
+    -webkit-transition-timing-function: ease-in-out;
+       -moz-transition-timing-function: ease-in-out;
+        -ms-transition-timing-function: ease-in-out;
+         -o-transition-timing-function: ease-in-out;
+            transition-timing-function: ease-in-out;
+  }
+
+  html{
+    font-family:Helvetica; /* 移动端定义字体的代码  移动端定义字体，移动端没有微软雅黑字体 */
+    -webkit-overflow-scrolling : touch; /*手机端，解决 overflow-y:scroll;卡顿问题*/
+    -webkit-text-size-adjust:none; /* ios使用-webkit-text-size-adjust禁止调整字体大小 */ 
+    overflow:-moz-scrollbars-vertical;/*强制firefox出现滑动条*/
+    // -webkit-user-select:none; /* 阻止按下选中选择文本 (慎用)*/
+    // -webkit-touch-callout: none;  /* 禁止ios长按时触发系统的菜单，禁止ios&android长按时下载图片 (慎用)*/
+  }
+
+  /* 标签重置 */ 
+    body,h1,h2,h3,h4,h5,h6,p,dl,dd,ul,ol,pre,form,input,textarea,th,td,select{
+      margin:0;
+      padding:0;
+      font-weight: normal;
+      text-indent: 0;
+    }
+    a,button,input,textarea,select{
+      background: none;
+      -webkit-tap-highlight-color:rgba(255,0,0,0);
+      outline:none;
+      -webkit-appearance:none;
+    }
+
+    img{border:none; vertical-align:top;}
+    i{ font-style:normal}
+
+  /* 列表重置 */ 
+    ul, ol { list-style:none;}
+    li{ list-style:none;}
+
+  /* 表格重置 */ 
+    table{border-collapse:collapse;}
+    table { width:100%; border-spacing:0; border:0;}
+    table th, table td { border:0;}
+
+  /* a 标签重置 */ 
+    a{text-decoration:none;}
+    a:link, a:visited {text-decoration:none;}
+
+/**
+ * 表单样式重置
+ *******************************************************************************************************/
+  input:focus { outline: none; }
+  input:-webkit-autofill { -webkit-box-shadow: 0 0 0px 1000px white inset; } /*利用阴影来填充掉input自动填充色*/
+  input::-webkit-input-placeholder{color:#666666;} // 修改webkit表单输入框placeholder的样式
+  input:focus::-webkit-input-placeholder{color:#666666;}
+  input::-webkit-input-speech-button {display: none} // android 上去掉语音输入按钮
+  textarea{ resize:none; overflow:auto;}
+
+/**
+ * 滚动条默认显示样式
+ *******************************************************************************************************/
+  ::-webkit-scrollbar-thumb{
+    background-color:#d8d8d8;
+    height:0.5rem;
+    outline-offset:-2px;
+    outline:2px solid #fff;
+    -webkit-border-radius:5px;
+    border: 0px solid #fff;
+  }
+  ::-webkit-scrollbar-track-piece{
+    background-color:#eaeaea;
+    -webkit-border-radius:0;
+  }
+  ::-webkit-scrollbar{
+    width:4px;
+    height:8px;
+  }
+
+/**
+ * Flex 盒模型布局(按常用顺序)
+ *******************************************************************************************************/
+  .ui-flex {display: flex;}
+  .ui-flex-1 {flex: 1;}
+  .ui-flex-wrap {flex-wrap: wrap;}
+  .ui-cont-sa {justify-content: space-around;}
+  .ui-nowrap{white-space:nowrap;}
+  .ui-jtop {justify-content: flex-start;}
+  .ui-jright {justify-content: flex-end;}
+  .ui-cont-sb {justify-content: space-between;}
+  .ui-jcenter {justify-content: center;}
+  .ui-cont-center {align-items: center;}
+  .ui-cont-flex-start {align-items: flex-start;}
+  .ui-cont-flex-end {align-items: flex-end;}
+  .ui-cont-baseline {align-items: baseline;}
+  .ui-inline-block {display: inline-block;}
+  .ui-row {flex-direction: row;}
+  .ui-column {flex-direction: column;}
+  .box_s {display: flex;flex-direction: column;}
+  
+/**
+ * 其他通用 Public
+ *******************************************************************************************************/
+  /* 浮动 */
+    .f_left{float:left;}
+    .f_right{float:right;}
+    .clearfix:after { content:''; display:block; clear:both; }
+    .clearfix { zoom:1; }
+
+  /* 强制换行 */
+    .toWrap{
+      word-break: break-all; /* 只对英文起作用，以字母作为换行依据。 */
+      word-wrap: break-word; /* 只对英文起作用，以单词作为换行依据。*/
+      white-space: pre-wrap; /* 只对中文起作用，强制换行。*/
+    }
+
+  /* 禁止换行,超出省略号 */
+  .noWrapEllipsis{
+    white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+  }
+
+  /* 文字对齐-方式 */
+  .text-justify{text-align:justify;text-justify:inter-ideograph;} /*两顿对齐*/
+  .text-left {text-align: left;}
+  .text-center {text-align: center;}
+  .text-right {text-align: right;}
+
+  /*鼠标手型*/
+  .ui-cous {cursor: pointer;}
+
+  /*文本加粗*/ 
+  .font-bold {font-weight: bold;}
+
+
