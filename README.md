@@ -1,1 +1,4 @@
-# ESP6288
+# ESP8266
+hotspot
+captive portal
+Fallback UI
