@@ -1,4 +1,4 @@
-
+Team: Bahareh Saboktakin, Khulood Alawadi, Qifan Zhao, Yi-fan Hsieh
  This is part of the prototype for Fallback project <br />
  This program is written for ESP8266. By uploading this code into your ESP8266, you will get an WiFi access point, which serves as a captive portal. It means upong clicking on the WiFi sign in page, you will get redirected to a customized website which is hosted on ESP8266 as well. The website is under the data folder. <br />
  
